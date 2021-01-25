@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="form">
+    <title>Mishka - На заказ</title>
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/order.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__menu container">
+        <div class="header__logo-wrapper">
+          <a class="header__logo header-logo" aria-label="Мишка">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="header-logo__image" src="img/logo-mobile.svg" alt="Логотип сайта Мишка">
+            </picture>
+          </a>
+          <button class="header__toggle" id="toggle-button" aria-label="Меню"></button>
+        </div>
+        <ul class="header__site-navigation site-navigation--closed">
+          <li class="header__site-navigation-item">
+            <a class="header__site-navigation-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="header__site-navigation-item">
+            <a class="header__site-navigation-link" href="order.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="header__user-list user-navigation user-navigation--closed">
+          <li class="header__user-navigation-item">
+            <a class="header__user-navigation-link header__user-navigation-link--search" href="#" aria-label="Поиск по сайту">
+              <object class="header__user-navigation-link-image" type="image/svg+xml" data="./svg/icon-search.svg">Поиск</object>
+            </a>
+          </li>
+          <li class="header__user-navigation-item">
+            <a class="header__user-navigation-link header__user-navigation-link--cart" href="#">
+              <object class="header__user-navigation-link-image" type="image/svg+xml" data="./svg/icon-cart.svg">Корзина</object>Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+        <ul class="header__stock-list stock-navigation">
+          <li class="header__stock-navigation-item">
+            <a class="header__stock-navigation-link" href="#">Новые поступления</a>
+          </li>
+          <li class="header__stock-navigation-item">
+            <a class="header__stock-navigation-link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="header__text">Бесплатная доставка по России</p>
+      </nav>
+    </header>
+    <main>
+      <div class="header-title-wrapper">
+        <h2 class="header-title title">Вязание на заказ</h2>
+      </div>
+      <section class="order container">
+        <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="order__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <div class="order__category order__category--type">
+            <div class="order__category-inner">
+              <div class="order__title-wrap">
+                <b class="order__title order__title--type">Тип</b>
+              </div>
+              <div class="order__list order__list--type">
+                <input class="order__input order__input--radio" type="radio" name="type" value="Аксессуар для интерьера" id="interior" checked>
+                <label class="order__label order__label--type" for="interior">Аксессуар для интерьера</label>
+                <input class="order__input order__input--radio" type="radio" name="type" value="Детская игрушка" id="toys">
+                <label class="order__label order__label--type" for="toys">Детская игрушка</label>
+              </div>
+            </div>
+          </div>
+          <div class="order__category order__category--color">
+            <div class="order__category-inner order__category-inner--color">
+              <div class="order__title-wrap order__title-wrap--color">
+                <strong class="order__title order__title--color">Цвет</strong>
+              </div>
+              <div class="order__list order__list--color">
+                <input class="order__input order__input--checkbox" type="checkbox" value="Белый" id="white" checked>
+                <label class="order__label order__label--color" for="white">Белый</label>
+                <input class="order__input order__input--checkbox" type="checkbox" value="Серый" id="gray" checked>
+                <label class="order__label order__label--color" for="gray">Серый</label>
+                <input class="order__input order__input--checkbox" type="checkbox" value="Тиффани" id="tiffany">
+                <label class="order__label order__label--color" for="tiffany">&laquo;Тиффани&raquo;</label>
+                <input class="order__input order__input--checkbox" type="checkbox" value="Черный" id="black">
+                <label class="order__label order__label--color" for="black">Черный</label>
+                <input class="order__input order__input--checkbox" type="checkbox" value="Розовый" id="pink">
+                <label class="order__label order__label--color" for="pink">Розовый</label>
+                <input class="order__input order__input--checkbox" type="checkbox" value="Оранжевый" id="orange">
+                <label class="order__label order__label--color" for="orange">Оранжевый</label>
+              </div>
+            </div>
+          </div>
+          <div class="order__category order__category--fio">
+            <div class="order__category-inner">
+              <div class="order__title-wrap order__title-wrap--fio">
+                <b class="order__title order__title--fio">ФИО</b>
+              </div>
+              <div class="order__list  order__list--fio">
+                <div class="order__item">
+                  <label class="order__label--fio" for="field-name">Имя:</label>
+                  <input class="order__field order__field--fio" type="text" name="field-name" id="field-name" placeholder="Введите ваше имя*" required>
+                </div>
+                <div class="order__item">
+                  <label class="order__label--fio" for="field-surname">Фамилия:</label>
+                  <input class="order__field order__field--fio" type="text" name="field-surname" id="field-surname" placeholder="Укажите фамилию*" required>
+                </div>
+                <div class="order__item">
+                  <label class="order__label--fio" for="field-patronymic">Отчество:</label>
+                  <input class="order__field order__field--fio" type="text" name="field-patronymic" id="field-patronymic" placeholder="Отчество, если желаете">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order__category order__category--contacts">
+            <div class="order__category-inner order__category-inner--wrap">
+              <div class="order__title-wrap order__title-wrap--contacts">
+                <b class="order__title order__title--tel">Тел</b>
+              </div>
+              <div class="order__list  order__list--tel">
+                <input class="order__field order__field--tel" type="tel" name="field-tel" placeholder="+7 XXX XX XX*" required>
+                <object type="image/svg+xml" data="./svg/icon-phone.svg">Тел</object>
+              </div>
+              <div class="order__title-wrap order__title-wrap--contacts">
+                <b class="order__title order__title--email">E-mail</b>
+              </div>
+              <div class="order__list  order__list--email">
+                <input class="order__field order__field--email" type="email" name="field-email" placeholder="Ваш Email*" required>
+                <object type="image/svg+xml" data="./svg/icon-mail.svg">E-mail</object>
+              </div>
+            </div>
+          </div>
+          <div class="order__category order__category--extra">
+            <div class="order__category-inner">
+              <div class="order__title-wrap order__title-wrap--extra">
+                <b class="order__title order__title--extra">Доп</b>
+              </div>
+              <div class="order__list  order__list--extra">
+                <textarea class="order__field order__field--extra" name="extra" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="order__category order__category--submit">
+            <div class="order__category-inner order__category-inner--submit">
+              <span class="order__required"><sup>*</sup>Поля обязательны для заполнения</span>
+              <button class="btn order__btn" type="submit" value="Отправить заказ">Отправить заказ</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__item footer__item--logo">
+          <object type="image/svg+xml" data="./svg/logo-footer.svg">Mishka</object>
+        </div>
+        <div class="footer__item footer__item--social">
+          <div class="footer__social-wrap">
+            <a class="footer__social-link footer__social-link--in" href="#">
+              <object type="image/svg+xml" data="./svg/icon-insta.svg">Instagram</object>
+            </a>
+            <a class="footer__social-link footer__social-link--fb" href="#">
+              <object type="image/svg+xml" data="./svg/icon-fb.svg">Facebook</object>
+            </a>
+            <a class="footer__social-link footer__social-link--tw" href="#">
+              <object type="image/svg+xml" data="./svg/icon-twitter.svg">Twitter</object>
+            </a>
+          </div>
+        </div>
+        <div class="footer__item footer__item--dev">
+          <a class="footer__dev-link" href="https://htmlacademy.ru/">
+            <span>Разработано</span>
+            <object type="image/svg+xml" data="./svg/htmlacademy.svg">Html Acadamy</object>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
