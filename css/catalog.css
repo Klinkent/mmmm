@@ -13,13 +13,10 @@
   border: 1px solid rgb(236, 236, 236);
 }
 
-.catalog-list__photo {
-  font-size: 0;
-}
-
 .catalog-list__photo img {
   width: 100%;
   height: auto;
+  vertical-align: top;
 }
 
 .catalog-list__desc {
@@ -61,13 +58,14 @@
 }
 
 .catalog-list__basket {
-  font-size: 0;
   position: relative;
+  width: 20px;
+  height: 18px;
 }
 
-.catalog-list__basket svg {
-  opacity: 0.2;
-  background-color: rgb(255, 255, 255);
+.catalog-list__basket object {
+  vertical-align: bottom;
+  filter: var(--icon-grey-color);
 }
 
 .video {
@@ -118,9 +116,14 @@
   background-size: cover;
 }
 
+.video__block-play {
+   width: 102px;
+   height: 78px;
+}
+
 .video__block-play:hover {
   transform: scale(1.025);
-  transition: transform 0.3s ease;
+  transition: transform .3s ease;
 }
 
 .video__desc-wrap {
@@ -143,14 +146,14 @@
 /* ------ MEDIA TABLETS ------*/
 
 @media (min-width: 768px) {
+
   .catalog-list__item {
     display: flex;
     min-height: 334px;
     margin-bottom: 52px;
   }
 
-  .catalog-list__desc,
-  .catalog-list__photo {
+  .catalog-list__desc, .catalog-list__photo {
     display: flex;
     width: 50%;
   }
@@ -226,7 +229,7 @@
     width: 100%;
     min-height: 455px;
     background-image: url(../img/video-tablet@1x.jpg);
-    background-size: 668px;
+    background-size: cover;
     background-position: center;
     margin-bottom: 15px;
   }
@@ -246,11 +249,13 @@
     margin-top: 10px;
     margin-bottom: 40px;
   }
+
 }
 
 /* ------ MEDIA DESKTOP ------*/
 
 @media (min-width: 1150px) {
+
   .catalog-list {
     margin-bottom: 30px;
   }
@@ -298,8 +303,7 @@
     font-size: 0;
   }
 
-  .video__desc-wrap,
-  .video__title-wrap {
+  .video__desc-wrap, .video__title-wrap {
     flex-direction: column;
   }
 
@@ -339,7 +343,8 @@
 
 /* ------ MEDIA OTHER ------*/
 
-@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1150px),
+@media
+(-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1150px),
 (min-resolution: 1.5dppx) and (min-width: 1150px),
 (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1150px),
 (min-resolution: 144dpi) and (min-width: 1150px) {

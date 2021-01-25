@@ -1,0 +1,11 @@
+{
+  "name": "mishka--valid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "done"
+  },
+  "author": "",
+  "license": "ISC"
+}

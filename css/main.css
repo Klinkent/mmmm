@@ -60,15 +60,14 @@
   background-color: rgb(86, 195, 178);
 }
 
-.hero__item--interior svg,
-.hero__item--toys svg {
+.hero__item--interior img,
+.hero__item--toys img {
   position: absolute;
   right: 40px;
   top: 22px;
   width: 41px;
   height: 62px;
   opacity: 0.5;
-  fill: rgb(20, 144, 128);
 }
 
 /* ------ best-seller ------*/
@@ -178,7 +177,37 @@
   line-height: 20px;
 }
 
-.about__item svg {
+.about__item--materials img {
+  width: 33px;
+  height: 38px;
+}
+
+.about__item--style img {
+  width: 47px;
+  height: 27px;
+}
+
+.about__item--like img {
+  width: 34px;
+  height: 27px;
+}
+
+.about__item--manual img {
+  width: 35px;
+  height: 34px;
+}
+
+.about__item--support img {
+  width: 55px;
+  height: 23px;
+}
+
+.about__item--box img {
+  width: 33px;
+  height: 32px;
+}
+
+.about__item img {
   display: block;
   margin-bottom: 15px;
 }
@@ -231,7 +260,6 @@
 .feedbacks__slider, .feedbacks__slider-btn {
   display: flex;
   position: relative;
-  font-size: 0;
 }
 
 .feedbacks__slider {
@@ -244,6 +272,11 @@
   align-items: center;
   width: 50%;
   height: 50px;
+}
+
+.feedbacks__slider-btn object {
+  width: 56px;
+  height: 26px;
 }
 
 /* ------ Contact ------*/
@@ -569,6 +602,11 @@
 
   .contacts__flag {
     display: block;
+  }
+
+  .contacts__flag img {
+    width: 47px;
+    height: 81px;
   }
 
   .contacts__address {
